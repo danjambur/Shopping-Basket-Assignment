@@ -1,0 +1,13 @@
+<div class="col-md-12">
+    <div class="row">
+        <div ng-repeat="product in products" class="col-md-3 col-sm-3 col-xs-12 products">
+            <h3>{{product.name}}</h3>
+            <p class="pull-left">&pound;{{product.price}}</p>
+            <p class="pull-right"> Quantity: <input type="number" ng-model="product.qty"> {{product.qty}}</p>
+            <div class="image-wrap">
+                <img ng-src="{{product.image}}">
+            </div>
+            <button class="btn btn-default center-block" ng-click="addProduct(product)" tooltip="Click this button to add to the basket">Add To Basket</button>
+        </div>
+    </div>
+</div>

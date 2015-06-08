@@ -1,0 +1,24 @@
+
+<div class="col-md-12">
+
+    <button type="button" class="btn btn-default" ng-click="clear_basket(product)">Clear basket</button>
+
+    <div class="basket">
+        <h3>Basket</h3><div class="col-md-4" ng-repeat="product in basket">
+        <h3>{{product.name}}</h3>
+        <input type="text" ng-model="product.name">
+        <p>&pound;{{product.price}}</p>
+        <br>
+        <div class="image-wrap">
+            <img ng-src="{{product.image}}">
+        </div>
+        <button  ng-click="remove_from_basket(product)">Remove</button>
+        <label> Quantity: <input type="number" ng-model="product.qty">{{product.qty}}</label>
+    </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <p>Total: {{basket_total()}}</p>
+    <p>Price: &pound;{{basket_price()}}</p>
+    <button ng-click="saveBasket()" tooltip="Click this button to save the basket to a basket file." class="btn btn-default pull-right">Save Basket</button>
+</div>
