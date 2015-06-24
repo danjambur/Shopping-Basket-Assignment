@@ -16,6 +16,7 @@ AngularJS and Protractor are included in this repository.
 The file structure of this program are as follows:
 
 Shopping Basket Assignment
+```
 -css
 --bootstrap
 --main.css
@@ -44,7 +45,7 @@ Shopping Basket Assignment
 ---tests
 ----conf.js
 ----spec.js
-
+```
 
 The files listed above are the most relevant files in the project. The CSS is created in LESS format, and compiled into CSS. The images are the images of the example products.
 
@@ -68,8 +69,10 @@ The 'saveBasket' method uses a $http.post to find the 'save.php' file, and sets 
 
 The saveService.js file contains the SaveService object. It is a simple service that returns just a $http.get request, looks for the basket.txt file to make sure it is there.
 
-The router.js file contains the routes used in this application. 
+The router.js file contains the routes used in this application. These check what the URL state is, and uses the according controllers and templates.
 
+The tests folder contains the spec.js and the conf.js files.
+The conf.js file is the settings for the selenium test server. The selenium server needs to be running before the tests are carried out. The spec.js file contains the tests, written with the protractor library.
 
 
 
